@@ -1,5 +1,7 @@
 {
   "name": "Ionic5-Navigatore",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

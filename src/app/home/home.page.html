@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ristoranti del cuore
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let res of this.restaurants" (click)="goTo(res)" detail>
+      <ion-label>
+        <h2>{{res.name}} </h2>
+        <h4>{{res.address}} </h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
